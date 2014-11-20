@@ -55,10 +55,10 @@
   </div>
 
   <div>
-    <% @quotes_array.each_with_index do |quote,index| %>
-        <%= quote %>
+    <% @quotes_array.each do |quote| %>
+        <%= quote[0] %>
     <ul>
-      <font color="grey"><i> <%= "- #{@quote_authors[index]}" %> </i></font>
+      <font color="grey"><i> <%= "- #{quote[1]}" %> </i></font>
     </ul>
     <% end %>
   </div>
