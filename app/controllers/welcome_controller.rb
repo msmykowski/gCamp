@@ -1,8 +1,9 @@
 class WelcomeController<ApplicationController
   def home
-    @quotes_array=["Failure is not an option. Everyone has to Succeed-Arnold",
-      "Your time is limited so don't waste it living someone elses life-Steve",
-      "Better ingredients, better pizza-Papa",]
+    @quotes_array=["Failure is not an option. Everyone has to Succeed",
+      "Your time is limited so don't waste it living someone elses life",
+      "Better ingredients, better pizza",]
+    @quote_authors=["Arnold Schwarzenegger","Steve Jobs","Papa Johns"]
   end
 
   def about
