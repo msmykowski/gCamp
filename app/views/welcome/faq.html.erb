@@ -1,0 +1,10 @@
+<h1>Frequently Asked Questions</h1>
+
+<div>
+
+  <% @faq_array.each do |faq| %>
+    <p><b><%= faq[0] %></b></p>
+    <p><%= "#{faq[1]}" %></p>
+  <% end %>
+
+</div>
