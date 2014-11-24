@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :tasks
+
   get "about"=>"welcome#about", as: :about
   get "terms"=>"welcome#terms", as: :terms
   get "FAQ"=>"welcome#faq", as: :faq
