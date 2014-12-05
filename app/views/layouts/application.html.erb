@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>GCamp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
 
 
-
-<body>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <%= link_to "gCamp", root_path, class: "navbar-brand" %>
+    <head>
+      <title>GCamp</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+    </head>
+
+
+    <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div>
+          <div class="navbar-header">
+            <%= link_to "gCamp", root_path, class: "navbar-brand" %>
+          </div>
+        </div>
+      </nav>
+
+    <div>
+      <%= yield %>
     </div>
+
+    <div>
+      <footer class="site-footer">
+          <a href="/about">About</a> | <a href="/terms">Terms</a> | <a href="/FAQ">FAQ</a> | <a href="/tasks">Tasks</a> | <a href="/users">Users</a>
+      </footer>
+    </div>
+
+  </body>
+
+
   </div>
-</nav>
-
-<div class="container">
-<%= yield %>
-</div>
-
-<footer>
-  <div class="container">
-    <a href="/about">About</a> | <a href="/terms">Terms</a> | <a href="/FAQ">FAQ</a> | <a href="/tasks">Tasks</a>
-  </div>
-</footer>
-
-<!-- <nav class="navbar navbar-fixed-bottom">
-  <a href="/about">About</a> | <a href="/terms">Terms</a>
-</nav> -->
-
-
-</body>
 </html>

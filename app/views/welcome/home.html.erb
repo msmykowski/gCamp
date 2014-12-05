@@ -51,8 +51,6 @@
   <div>
     <% @quotes_array.each do |quote| %>
         <%= quote[0] %>
-    <ul>
-      <font color="grey"><i> <%= "- #{quote[1]}" %> </i></font>
-    </ul>
+      <p><font color="grey"><i> <%= "- #{quote[1]}" %> </i></font></p>
     <% end %>
   </div>
