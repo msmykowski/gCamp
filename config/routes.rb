@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get "about"=>"welcome#about", as: :about
   get "terms"=>"welcome#terms", as: :terms
-  get "FAQ"=>"welcome#faq", as: :faq
+  get '/faqs' => 'faqs#index', as: :faq
 
   root 'welcome#home', as: :root
   # The priority is based upon order of creation: first created -> highest priority.
