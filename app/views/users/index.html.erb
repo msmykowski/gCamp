@@ -1,8 +1,10 @@
+<% if notice %>
+<center id="notice" class="alert alert-success" role="alert"> <font color="green"> <%= notice %> </font></center>
+<% end %>
+
 <div class="page-header">
-  <%= link_to 'New User', new_user_path, class: "pull-right btn btn-primary" %>
   <div class="pull-right">
-    <%= link_to "All", type: "all"%> |
-    <%= link_to "Incomplete", type: "incomplete"%>
+    <%= link_to 'New User', new_user_path, class: "btn btn-info" %>
   </div>
   <h1>Users</h1>
 </div>
@@ -18,12 +20,11 @@
   <tbody>
     <% @users.each do |user| %>
     <tr>
-      <td><%= user.description %></td>
-      <td><%= user.complete %></td>
-      <td><%= user.due_date %></td>
+      <td><%= user.first_name %> <%= user.last_name %></td>
+      <td><%= mail_to user.email %></td>
       <td class="pull-right">
         <%= link_to 'Show', user, class: "btn btn-success" %>
-        <%= link_to 'Edit', user_task_path(user), class: "btn btn-primary" %>
+        <%= link_to 'Edit', edit_user_path(user), class: "btn btn-primary" %>
         <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
       </td>
     </tr>
