@@ -1,6 +1,4 @@
-<% if notice %>
-<center id="notice" class="alert alert-success" role="alert"> <font color="green"> <%= notice %> </font></center>
-<% end %>
+
 
 <div class="page-header">
   <div class="pull-right">
@@ -20,7 +18,7 @@
   <tbody>
     <% @users.each do |user| %>
     <tr>
-      <td><%= user.first_name %> <%= user.last_name %></td>
+      <td><%= link_to "#{user.first_name} #{user.last_name}", user %></td>
       <td><%= mail_to user.email %></td>
       <td class="pull-right">
         <%= link_to 'edit', edit_user_path(user) %>
