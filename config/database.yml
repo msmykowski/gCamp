@@ -13,10 +13,7 @@
 #
 # Configure Using Gemfile
 # gem 'pg'
-test:
-  adapter: postgresql
-  database: travis_ci_test
-  username: postgres
+
 #
 default: &default
   adapter: postgresql

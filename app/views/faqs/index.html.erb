@@ -2,9 +2,9 @@
 
 <div>
 
-  <% @faq_array.each do |faq| %>
-  <p><b><%= faq[0] %></b></p>
-  <p><%= "#{faq[1]}" %></p>
+  <% @faqs.each do |faq| %>
+  <p><b><%= faq.question %></b></p>
+  <p><%= faq.answer %></p>
   <% end %>
 
 </div>
