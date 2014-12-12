@@ -1,0 +1,6 @@
+<h1> <%= @project.name %> </h1>
+
+<div class="pull-right">
+  <%= link_to "edit", edit_project_path, class: "btn btn-info" %>
+  <%= link_to "delete", project_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+</div>
