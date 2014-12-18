@@ -8,6 +8,14 @@ Rails.application.routes.draw do
   get "terms"=>"welcome#terms", as: :terms
   get '/faqs' => 'faqs#index', as: :faq
 
+  get "/signup" => "registrations#new", as: :registrations
+  post "/signup" => "registrations#create"
+
+  get "/signin" => "authentication#new", as: :sign_in
+  post "/signin" => "authentication#create"
+
+  get '/sign-out' => 'authentication#destroy', as: :signout
+
   root 'welcome#home', as: :root
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
