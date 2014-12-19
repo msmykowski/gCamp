@@ -2,7 +2,7 @@
   <div class="pull-right">
     <%= link_to "All", type: "all"%> |
     <%= link_to "Incomplete", type: "incomplete"%>
-    <%= link_to 'New Task', new_task_path, class: "btn btn-info" %>
+    <%= link_to 'New Task', new_project_task_path(@project), class: "btn btn-info" %>
   </div>
   <h1>Tasks</h1>
 </div>
@@ -23,9 +23,9 @@
         <td><%= task.complete %></td>
         <td><%= task.due_date %></td>
         <td class="pull-right">
-          <%= link_to 'Show', task, class: "btn btn-success" %>
-          <%= link_to 'Edit', edit_task_path(task), class: "btn btn-info" %>
-          <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          <%= link_to 'Show', project_task_path(@project, task), class: "btn btn-success" %>
+          <%= link_to 'Edit', edit_project_task_path(@project, task), class: "btn btn-info" %>
+          <%= link_to 'Delete', project_task_path(@project, task), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
         </td>
       </tr>
     <% end %>

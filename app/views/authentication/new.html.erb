@@ -1,17 +1,19 @@
-<h1>Sign In</h1>
+<div class="well col-md-4 col-md-offset-4">
+
+<h1>Sign in to gCamp!</h1>
 
 <%= form_tag signin_path do |f| %>
 
 <% if @sign_in_error %>
 <p>
-  <%= @sign_in_error %>
+  <font color="red"><%= @sign_in_error %></font>
 </p>
 <% end %>
 
 <div>
   <%= label_tag :email %>
 </div>
-<div>
+<div class>
   <%= email_field_tag :email %>
 </div>
 
@@ -23,7 +25,8 @@
 </div>
 
 <div>
-  <%= submit_tag "Sign in" %>
+  <%= submit_tag "Sign in", class: "btn btn-primary" %>
 </div>
 
 <% end %>
+</div>
